@@ -1,0 +1,121 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.contenedor {
+    @include m.contenedor;
+}
+
+.contenedor-md {
+    @include m.contenedor-md;
+}
+
+.contenedor-sm {
+    @include m.contenedor-sm;
+}
+
+.responsivo-reserva {
+    @include m.grid(3, 10px);
+
+    @include m.desktop {
+        @include m.grid(4, 10px);
+    }
+
+    @include m.desktop_xl {
+        @include m.grid(6, 10px);
+    }
+}
+
+.responsivo {
+    @include m.grid(1, 20px);
+
+    @include m.tablet {
+        @include m.grid(2, 20px);
+    }
+
+    @include m.desktop {
+        @include m.grid(3, 20px);
+    }
+
+    @include m.desktop_xl {
+        @include m.grid(4, 20px);
+    }
+}
+
+.responsivo-1 {
+    @include m.grid(1, 20px);
+}
+
+.responsivo-2 {
+    @include m.grid(1, 20px);
+
+    @include m.tablet {
+        @include m.grid(2, 20px);
+    }
+}
+
+.responsivo-3 {
+    @include m.grid(2, 20px);
+    justify-items: start;
+
+    @include m.tablet {
+        @include m.grid(3, 20px);
+        justify-items: start;
+    }
+}
+
+.password-container {
+    position: relative;
+    align-items: center;
+
+    input {
+        width: 100%;
+        padding-right: 40px; // Espacio para el icono
+    }
+
+    .toggle-password {
+        position: absolute;
+        right: 1.20px;
+        top: 55px;
+        cursor: pointer;
+        font-size: 20px;
+        color: gray;
+        transition: color 0.3s;
+
+        @include m.tablet {
+            top: 56px;    
+        }
+
+        &:hover {
+            color: darkgray;
+        }
+    }
+}
+
+.password-rules {
+    margin-top: 10px;
+    font-size: 14px;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 5px;
+        color: v.$rojo;
+
+        i {
+            color: v.$rojo;
+        }
+
+        &.valid {
+            color: v.$verde;
+
+            i {
+                color: v.$verde;
+            }
+        }
+    }
+}
+
+.swal2-show {
+    font-size: 15px;
+}
