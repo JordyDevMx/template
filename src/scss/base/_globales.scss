@@ -1,0 +1,47 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$fuente_principal;
+    font-size: 18px;
+    background-color: v.$white;
+    color: v.$dark;
+}
+a {
+  color: v.$secondary;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, v.$secondary, transparent 25%);
+  text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Cambiar el tamaño de la barra de scroll */
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+/* Cambiar el fondo de la barra */
+::-webkit-scrollbar-track {
+    background: v.$secondary; 
+}
+
+/* Cambiar el "thumb" (parte que se arrastra) */
+::-webkit-scrollbar-thumb {
+    background: v.$primary; 
+    border-radius: 5px;
+}
