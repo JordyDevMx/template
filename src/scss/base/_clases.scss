@@ -63,59 +63,6 @@
     }
 }
 
-.password-container {
-    position: relative;
-    align-items: center;
-
-    input {
-        width: 100%;
-        padding-right: 40px; // Espacio para el icono
-    }
-
-    .toggle-password {
-        position: absolute;
-        right: 1.20px;
-        top: 55px;
-        cursor: pointer;
-        font-size: 20px;
-        color: gray;
-        transition: color 0.3s;
-
-        @include m.tablet {
-            top: 56px;    
-        }
-
-        &:hover {
-            color: darkgray;
-        }
-    }
-}
-
-.password-rules {
-    margin-top: 10px;
-    font-size: 14px;
-
-    div {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 5px;
-        color: v.$rojo;
-
-        i {
-            color: v.$rojo;
-        }
-
-        &.valid {
-            color: v.$verde;
-
-            i {
-                color: v.$verde;
-            }
-        }
-    }
-}
-
 .swal2-show {
     font-size: 15px;
 }
